@@ -1,0 +1,41 @@
+// đặt biến màu
+// đây là biến toàn cục, sữ dụng đc ở all
+$primaryBtn: rgba(176, 255, 50, 0.575);
+$maubtN: rgb(73, 214, 7);
+$textcolor:  rgb(77, 160, 9);
+
+// trong scss có thể dùng operator + - * / thông thường
+@import './body' ;
+// @use 'body';
+// .khoicha{
+//     background-color: body.$primary-color;
+// }
+
+
+.khoime{
+    //đây là biến cục bộ chỉ sữ dụng trong phạm vi {}
+    $colorwin: rgb(75, 170, 75);
+    // cách biến biến cục bộ thành biến toàn cục thêm !global
+    // $colorwin:    rgb(75, 170, 75) !global;
+    @extend .khoicha; // @extend để mở rộng giống theo 1 khối khác mà mình đã css
+    max-width: 80%;
+    margin: 36px auto 0 auto;
+    justify-content: space-around;
+
+    .canhle{
+        padding: 0 16px;
+    }
+    box-sizing: border-box;
+    .khoi4{        
+        flex:1;
+        
+    }
+    .khoi5{        
+        flex:3;
+       
+    }
+    .khoi6{        
+        flex:1;
+        
+    }
+}

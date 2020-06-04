@@ -1,0 +1,48 @@
+// hỗn hợp
+@mixin flexCenter($direction, $backgroud) {
+    //có thể truyền nhiều biến trong minxin
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    //   justify-content: space-between;
+    align-items: center;
+    flex-direction: $direction; // truyền tham số qua biến này
+    background: $backgroud;
+  }
+// $primary-color: blue;
+
+.khoicha {
+    // @include flexCenter(column,none);
+    display: flex;
+    justify-content: space-between;
+    color: $textcolor;
+    button {
+      font-size: large;
+      background: $primaryBtn;
+      // nói chung & đại diện cho nameclasselement rồi - gì - !!!
+      // &-left = #nameclassid-left lúc này & đại diện cho #id là lớp cha của nó
+      // & dùng để tham chiếu tới phần tử cha gần nhất &:hover <=> button:hover
+      &:hover, &:active, &:focus  {  // <=> button:hover, button:active, button:focus {}
+        background: $maubtN;
+  
+      &::after {
+          content: "hello";
+        }
+      &::before {
+          content: "say";
+        }
+      
+      }
+    }
+    .khoi1{
+        flex:1;
+    }
+    .khoi2{
+        flex:3;
+    }
+    .khoi3{
+        flex:1;
+    }
+  }
+
+

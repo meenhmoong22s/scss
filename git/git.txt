@@ -1,0 +1,22 @@
+git init
+git add .
+git commit -m “noi dung”
+git remote add origin https://gitlab.com/buoyd/ionicframwork-learn
+git push -u origin master
+
+git status
+git branch (nhánh)
+git checkout -b namebranch (tạo nhánh)
+git checkout master ( chọn lại nhánh master)
+git branch -d name (xóa nhánh)
+git add .
+git commit -m “”
+git remote add <name remote> href
+git push -u nameremote namebranch
+
+git remote  -v (list branch)
+
+git merge <nhánh> hợp nhánh
+git pull để cập nhật kho cục bộ và commit mới nhất
+
+ng build --prod --output-path docs --base-href /      project_name để deploy angular lên github
